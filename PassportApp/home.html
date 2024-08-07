@@ -1,0 +1,59 @@
+
+<!-- This is the main HTML file for the Passport Generator application -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The head section contains metadata and links to external resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- The body contains the main content of the page -->
+    <div class="container">
+        <!-- Container for the entire application -->
+        <form id="passport-form" class="passport-form">
+            <!-- Form for inputting passport information -->
+            <h2>Passport Generator</h2>
+            <div class="form-group">
+                <!-- Input field for Full Name -->
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required pattern="^[a-zA-Z ]{5,}$">
+            </div>
+            <div class="form-group">
+                <!-- Input field for ID Card Number -->
+                <label for="id-card">ID Card Number</label>
+                <input type="tel" id="id-card" name="id-card" required pattern="^[0-9]{11}$">
+            </div>
+            <div class="form-group">
+                <!-- Input field for Birthdate -->
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" name="birthdate" required max="">
+            </div>
+            <div class="form-group">
+                <!-- Input field for Mobile Number -->
+                <label for="mobile-number">Mobile Number</label>
+                <input type="tel" id="mobile-number" name="mobile-number" required pattern="^[0-9]{10}$">
+            </div>
+            <button type="submit">Generate</button>
+        </form>
+        <div id="passport-card" class="passport-card hidden">
+            <!-- Div to display the generated passport card (initially hidden) -->
+            <img src="fake-passport-image.jpeg" alt="Passport Image">
+            <div class="passport-info">
+                <!-- Container for displaying passport information -->
+                <p><strong>Name:</strong> <span id="display-full-name"></span></p>
+                <p><strong>ID:</strong> <span id="display-id-card"></span></p>
+                <p><strong>Passport Number:</strong> <span id="display-passport-number"></span></p>
+                <p><strong>Release Date:</strong> <span id="display-release-date"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Link to external JavaScript file -->
+</body>
+</html>
+<!-- End of HTML document -->
+
+
